@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ech_config (0.0.3)
+      sorbet-runtime
+    openssl (3.2.0)
+    sorbet-runtime (0.5.11178)
+
+PLATFORMS
+  arm64-darwin-23
+
+DEPENDENCIES
+  ech_config
+  openssl
+
+BUNDLED WITH
+   2.4.22
