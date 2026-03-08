@@ -2,6 +2,7 @@
 
 `pem_to_echconfigs` parses ECHConfigs PEM file and print results.
 
+- https://datatracker.ietf.org/doc/html/rfc9849
 - https://datatracker.ietf.org/doc/html/rfc9934
 
 You can run test it the following:
@@ -25,6 +26,10 @@ ASUTY2xvdWRmbGFyZS1lc25pLmNvbQAA
 
 ---------- base64 ----------
 AEb+DQBCGwAgACDSupslkfIkg/C0be/yDdZqtUJs4ssKG5IgWHadWXn4KQAEAAEAASUTY2xvdWRmbGFyZS1lc25pLmNvbQAA
+
+---------- hex ----------
+00 46 fe 0d 00 42 1b 00 20 00 20 d2 ba 9b 25 91 f2 24 83 f0 b4 6d ef f2 0d d6 6a b5 42 6c e2 cb 0a 1b 92 20 58 76 9d 59 79 f8 29 00 04 00 01 00 01 25 13 63 6c 6f 75 64 66 6c 61 72 65 2d 65 73 6e 69 2e 63 6f 6d 00 00
+
 ----------- fields -----------
 ECHConfig:
   version(uint16):			fe 0d
@@ -39,5 +44,5 @@ ECHConfig:
         aead_id(uint16):		00 01
     maximum_name_length(uint8):		37
     public_name(opaque):		cloudflare-esni.com
-    extensions(opaque):
+    extensions(opaque):			
 ```

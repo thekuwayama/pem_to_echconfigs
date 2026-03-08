@@ -31,10 +31,14 @@ puts ''
 encoded = pem_to_base64(pem)
 puts '---------- base64 ----------'
 puts encoded
+puts ''
 bin = Base64.decode64(encoded)
+puts '---------- hex ----------'
+puts bin.unpack1('H*').scan(/.{2}/).join(' ')
+puts ''
 echconfigs = parse_echconfigs(bin)
 puts '----------- fields -----------'
-# https://www.ietf.org/archive/id/draft-ietf-tls-esni-15.html#section-4-2
+# https://datatracker.ietf.org/doc/html/rfc9849#section-4
 echconfigs.each do |c|
   puts 'ECHConfig:'
   puts "  version(uint16):\t\t\t#{c.version.unpack1('H4').scan(/.{2}/).join(' ')}"
