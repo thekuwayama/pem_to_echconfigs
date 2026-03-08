@@ -4,7 +4,7 @@ require 'base64'
 require 'ech_config'
 
 def pem_to_base64(pem)
-  pem.gsub(/-----(BEGIN|END) ECH CONFIGS-----/, '').gsub("\n", '')
+  pem.gsub(/-----(BEGIN|END) ECHCONFIG-----/, '').gsub("\n", '')
 end
 
 def parse_echconfigs(bin)

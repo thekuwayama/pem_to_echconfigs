@@ -2,6 +2,8 @@
 
 `pem_to_echconfigs` parses ECHConfigs PEM file and print results.
 
+- https://datatracker.ietf.org/doc/html/rfc9934
+
 You can run test it the following:
 
 ```sh-session
@@ -9,17 +11,17 @@ $ gem install bundler
 
 $ bundle install
 
-$ bundle exec pem_to_echconfigs.rb /path/to/pem/file
+$ bundle exec ruby pem_to_echconfigs.rb /path/to/pem/file
 ```
 
 For example:
 
 ```sh-session
 $ bundle exec ruby pem_to_echconfigs.rb echconfigs.pem
------BEGIN ECH CONFIGS-----
+-----BEGIN ECHCONFIG-----
 AEb+DQBCGwAgACDSupslkfIkg/C0be/yDdZqtUJs4ssKG5IgWHadWXn4KQAEAAEA
 ASUTY2xvdWRmbGFyZS1lc25pLmNvbQAA
------END ECH CONFIGS-----
+-----END ECHCONFIG-----
 
 ---------- base64 ----------
 AEb+DQBCGwAgACDSupslkfIkg/C0be/yDdZqtUJs4ssKG5IgWHadWXn4KQAEAAEAASUTY2xvdWRmbGFyZS1lc25pLmNvbQAA
